@@ -96,8 +96,12 @@ CFN_TEMPLATE_FILE=sam/cfn/pipeline.yaml
 OUTPUT_CFN_TEMPLATE_FILE=${CFN_TEMPLATE_FILE}.tmp
 
 # Set some cfn stack parameter overrides here
-GIT_BRANCH='master'
-GIT_USER='autodesk-lxp'
+#GIT_BRANCH='master'
+#GIT_USER='autodesk-lxp'
+#GIT_REPO='confluence-to-degreed'
+
+GIT_BRANCH='Sushruth-kr-patch-1'
+GIT_USER='Sushruth-kr'
 GIT_REPO='confluence-to-degreed'
 
 echo "GitBranch: $GIT_BRANCH"
