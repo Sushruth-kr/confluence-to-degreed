@@ -123,4 +123,4 @@ def lambda_handler(event, context):
 
       
       # Send the email...
-      send_email(config, params)
+      # send_email(config, params)
