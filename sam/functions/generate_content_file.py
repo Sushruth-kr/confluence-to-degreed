@@ -139,16 +139,16 @@ def lambda_handler(event, context):
       
       # If we have an sftp config, use it to upload the content
       # to the degreed ftp site.
-      # Commenting lines from 143-151 to stop sending files to degreed
-      if "degreed" in config and "sftp" in config['degreed']:
-        sftpconf = config['degreed']['sftp']
-        cnopts = pysftp.CnOpts()
-        cnopts.hostkeys = None
-        os.chdir("/tmp")
-        with pysftp.Connection(sftpconf['host'], username=sftpconf['username'], password=sftpconf['password'],
-                               cnopts=cnopts) as sftp:
-          with sftp.cd('inbound'):
-            sftp.put(filename)
+      # Commenting lines from 143-151 to stop uploading content file to degreed FTP site
+      #if "degreed" in config and "sftp" in config['degreed']:
+      #  sftpconf = config['degreed']['sftp']
+      #  cnopts = pysftp.CnOpts()
+      #  cnopts.hostkeys = None
+      #  os.chdir("/tmp")
+      #  with pysftp.Connection(sftpconf['host'], username=sftpconf['username'], password=sftpconf['password'],
+      #                         cnopts=cnopts) as sftp:
+      #    with sftp.cd('inbound'):
+      #      sftp.put(filename)
 
   # Run the pathway sql to generate the email list, and then put it
   # as the return value so it gets passed to email_notify.py
